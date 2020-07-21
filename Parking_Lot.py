@@ -64,7 +64,6 @@ class Bus(Vehicle):
 
 
 class ParkingSpot:
-    # Write your code here
     def __init__(self, lvl, r, n, sz):
         self.level = lvl
         self.row = r
@@ -101,7 +100,6 @@ class ParkingSpot:
 
 
 class Level:
-    # Write your code here
     def __init__(self, flr, num_rows, spots_per_row):
         self.floor = flr
         self.spots_per_row = spots_per_row
@@ -184,7 +182,6 @@ class ParkingLot:
     # @param {int} num_rows  each level has num_rows rows of spots
     # @param {int} spots_per_row each row has spots_per_row spots
     def __init__(self, n, num_rows, spots_per_row):
-        # Write your code here
         self.levels = []
         for i in xrange(n):
             self.levels.append(Level(i, num_rows, spots_per_row))
@@ -192,7 +189,6 @@ class ParkingLot:
         # Park the vehicle in a spot (or multiple spots)
     # Return false if failed
     def park_vehicle(self, vehicle):
-        # Write your code here
         for level in self.levels:
             if level.park_vehicle(vehicle):
                 return True
@@ -200,5 +196,4 @@ class ParkingLot:
 
     # unPark the vehicle
     def unpark_vehicle(self, vehicle):
-        # Write your code here
         vehicle.clear_spots()
